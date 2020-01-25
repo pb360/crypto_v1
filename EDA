@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+import datetime
+import matplotlib.pyplot as plt
+
+df0 = pd.read_csv('ETH Hist.csv')
+df1 = pd.read_csv('ETH USD Historical Data.csv')
+df2 = pd.read_csv('ETHBTC.csv')
+df3 = pd.read_csv('all_data.csv')
+
+df0['Date'] = pd.to_datetime(df0['Date'])
+df1['Date'] = pd.to_datetime(df1['Date'])
+df3dt=pd.df3['Date'].as_matrix()
+
+print(type(df3dt))
+
+#HEADS OF EACH
+#print(df0.head())
+#print(df1.head())
+#print(df2.head())
+#print(df3.head())
+
+#ETH/$ FOR TWO DIFFERENT DFS
+#plt.plot(df0['Date'],df0['High'], df1['Date'], df1['High'])
+#plt.show()
+
+#PLOT OF THE DIFFERENCE OF DF0 AND DF1
+#boo=((df0['Date']<='2017-11-16') & (df0.Date>='2016-03-10'))
+#df01=df0[boo]
+#df01=df01.reset_index(drop=True)
+#diff=df01['High']-df1['High']
+#plt.plot(df1['Date'], diff) #This plot just shows the difference between the two indexes
+#plt.show()
+
